@@ -267,7 +267,7 @@ class EndToEndTest_AGP812_G814 : EndToEndTest("8.12.2", "8.14.1")
 class EndToEndTest_AGP_STABLE_90_G90 : EndToEndTest("9.0.1", "9.1.0")
 class EndToEndTest_AGP_ALPHA_92_G94 : EndToEndTest("9.2.0-alpha02", "9.4.0")
 
-private fun expectedDependenciesJson(builtInKotlinEnabled: Boolean, agpVersion: String) = """[
+fun expectedDependenciesJson(builtInKotlinEnabled: Boolean, agpVersion: String) = """[
     {
         "group": "androidx.annotation",
         "name": "annotation",
@@ -450,7 +450,7 @@ private fun expectedDependenciesJson(builtInKotlinEnabled: Boolean, agpVersion: 
     }
 ]"""
 
-private fun expectedContents(builtInKotlinEnabled: Boolean) = """0:46 Android Support Library Annotations
+fun expectedContents(builtInKotlinEnabled: Boolean) = """0:46 Android Support Library Annotations
 0:46 Android AppCompat Library v7
 0:46 Android Arch-Common
 0:46 Android Arch-Runtime
